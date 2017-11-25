@@ -26,7 +26,7 @@ export const fetchUser = actions$ =>
         .map(user => fetchUserSuccess(user))
         .takeUntil(actions$.ofType(FETCH_USER))
         .catch(error => Observable.of(fetchUserFailed()))
-    )
+    );
 
 
 export default combineEpics(

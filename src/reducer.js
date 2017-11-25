@@ -1,4 +1,4 @@
-import { INCREASE_STORE, DECREASE_STORE, FETCH_USER, FETCH_USER_SUCCESS, FETCH_USER_FAILED } from './constants';
+import { INCREASE_STORE, DECREASE_STORE, FETCH_USER_SUCCESS, FETCH_USER_FAILED } from './constants';
 import { combineReducers } from 'redux';
 
 const initialStateCounter = { number: 0 };
