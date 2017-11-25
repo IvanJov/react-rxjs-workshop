@@ -15,21 +15,25 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h2>Delayed Counter:</h2>
-        <button onClick={this.props.increase}>Increase</button>
-        <button onClick={this.props.decrease}>Decrease</button>
-        <p>
-          Number: {this.props.number}
-        </p>
+      <div>
+        <div>
+          <h2>Delayed Counter:</h2>
+          <button onClick={this.props.increase}>Increase</button>
+          <button onClick={this.props.decrease}>Decrease</button>
+          <p>
+            Number: {this.props.number}
+          </p>
+        </div>
+
         <hr />
-        <p>
+
+        <div>
           <h2>Github Search:</h2>
           <input placeholder='Username' onChange={this.searchUser} />
           <p>
             <img src={this.props.image} alt='Not Found' width={100} />
           </p>
-        </p>
+        </div>
       </div>
     );
   }
