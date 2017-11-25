@@ -25,6 +25,7 @@ export const fetchUser = actions$ =>
       ajax.getJSON(`https://api.github.com/users/${action.payload.username}`)
         .map(user => fetchUserSuccess(user))
         .takeUntil(actions$.ofType(FETCH_USER))
+        .retry(2)
         .catch(error => Observable.of(fetchUserFailed()))
     );
 
